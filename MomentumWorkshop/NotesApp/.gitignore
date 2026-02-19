@@ -22,3 +22,6 @@ dist-electron
 *.njsproj
 *.sln
 *.sw?
+
+# Notes directory
+notes/

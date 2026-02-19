@@ -10,10 +10,10 @@ export default defineConfig({
       {
         entry: 'electron/main.ts',
         onstart(options) {
-          // Notify the renderer process to reload the page when the main process is ready
-          if (options.startup) {
-            options.reload();
-          }
+          // Remove ELECTRON_RUN_AS_NODE so Electron starts as a real Electron app
+          // (VSCode sets this since it's Electron-based)
+          delete process.env.ELECTRON_RUN_AS_NODE;
+          options.startup();
         },
         vite: {
           build: {

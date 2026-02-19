@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "A premium-feeling offline note-taking desktop app",
   "main": "dist-electron/main.js",
-  "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build && electron-builder",
